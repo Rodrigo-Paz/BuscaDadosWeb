@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="br-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=devise-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <style>
         .container {
             display: flex;
-            gap: .4rem;
+            gap: .2rem;
         }
 
         li {
@@ -29,11 +29,11 @@
     <script>
         (async () => {
             //abrindo o arquivo 
-            const response = await fetch('./instagram.json');
+            const response = await fetch(' ./captura/capturada02.json');
             const data = await response.json();
             //formatando os dados para enviar para html
             const htmlList = data
-                .map( ({src}) => `<li><img src="${src}"></li>`)
+                .map(({ src }) => `<li><img src="${src}"></li>`)
                 .join('');
             //colocar no html
             document.querySelector(".container").innerHTML=htmlList;
